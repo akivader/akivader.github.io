@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title>Nonresponsive form</title>
+	<link rel="stylesheet" href="formular_style.css">
+</head>
+
+
+
+<body>
+	<div class="topnav">
+		<a class="active" href="">Home</a>
+		<a href="">News</a>
+		<a href="">Contact</a>
+		<a href="">About</a>
+	</div>
+
+	<h1>Neresponzivny formular</h1>
+
+	<form class="formular">
+		<div class="question_image">
+			<img src="https://cdn.pixabay.com/photo/2020/12/27/12/07/sunrise-5863751_960_720.png">
+			<br>
+			<label>Kolko oblakov je na obrazku?</label>
+			<input type="number" id="imgquestion" name="imgquestion">
+		</div>
+
+		<div class="question_color">
+			<label>Aka farba vznikne zmiesanim modrej a zltej?</label>
+			<br>
+			<input type="radio" id="purple" name="color" value="purple">
+			<label for="purple">Fialova</label>
+			<input type="radio" id="grey" name="color" value="grey">
+			<label for="grey">Siva</label>
+			<input type="radio" id="green" name="color" value="green">
+			<label for="green">Zelena</label>
+		</div>
+
+		<div class="question_date">
+			<label>Aky je dnesny datum?</label>
+			<input type="date" id="todaysdate" name="todaysdate">
+		</div>
+
+		<div class="question_video">
+			<video src="https://player.vimeo.com/external/363014752.sd.mp4?s=8d89ca7f3395ce76751b346160ff2c84125e5315&profile_id=139&oauth2_token_id=57447761" autoplay controls>
+			</video><br>
+			<label>Co je znazornene na videu?</label><br>
+			<input type="checkbox" id="ans1" name="ans1" value="Bike">
+			<label for="ans1"> I have a bike</label>
+			<input type="checkbox" id="ans2" name="ans2" value="Car">
+			<label for="ans2"> I have a car</label>
+			<input type="checkbox" id="ans3" name="ans3" value="Boat">
+			<label for="ans3"> I have a boat</label>
+		</div>
+
+		<div class="question_range">
+			<label for="vol">Volume (between 0 and 50):</label>
+			<input type="range" id="vol" name="vol" min="0" max="50" disabled>
+		</div>
+
+
+
+	</form>
+</body>
+
+
+</html>
