@@ -4,6 +4,7 @@
 <head>
 	<title>Nonresponsive form</title>
 	<link rel="stylesheet" href="formular_style.css">
+	<script src="validation.js"></script>
 </head>
 
 
@@ -18,7 +19,7 @@
 
 	<h1>Neresponzivny formular</h1>
 
-	<form class="formular">
+	<form name="formular" class="formular" onsubmit="writeColor()">
 		<div class="question_image">
 			<img src="https://cdn.pixabay.com/photo/2020/12/27/12/07/sunrise-5863751_960_720.png">
 			<br>
@@ -26,15 +27,26 @@
 			<input type="number" id="imgquestion" name="imgquestion">
 		</div>
 
+<!--		<div class="question_color">-->
+<!--			<label>Aka farba vznikne zmiesanim modrej a zltej?</label>-->
+<!--			<br>-->
+<!--			<input type="radio" id="purple" name="color" value="purple">-->
+<!--			<label for="purple">Fialova</label>-->
+<!--			<input type="radio" id="grey" name="color" value="grey">-->
+<!--			<label for="grey">Siva</label>-->
+<!--			<input type="radio" id="green" name="color" value="green">-->
+<!--			<label for="green">Zelena</label>-->
+<!--		</div>-->
 		<div class="question_color">
-			<label>Aka farba vznikne zmiesanim modrej a zltej?</label>
-			<br>
-			<input type="radio" id="purple" name="color" value="purple">
-			<label for="purple">Fialova</label>
-			<input type="radio" id="grey" name="color" value="grey">
-			<label for="grey">Siva</label>
-			<input type="radio" id="green" name="color" value="green">
-			<label for="green">Zelena</label>
+			<fieldset id="colquestion">
+				<legend>Aka farba vznikne zmiesanim modrej a zltej?</legend>
+				<input type="radio" id="purple" name="color" value="purple">
+				<label for="purple">Fialova</label>
+				<input type="radio" id="grey" name="color" value="grey">
+				<label for="grey">Siva</label>
+				<input type="radio" id="green" name="color" value="green">
+				<label for="green">Zelena</label>
+			</fieldset>
 		</div>
 
 		<div class="question_date">
@@ -123,13 +135,46 @@
 		</div>
 
 		<div class="question_code">
-			<label>Code?</label>
-			<p>fdofsfodsfps<code>Abracadabra</code>fdfsfojdfdjsfds</p>
-			<input type="url" disabled>
+			<p>
+				<b>Lorem</b> ipsum dolor sit amet, consectetur adipiscing elit. Aliquam consectetur in <code>coded message</code> enim nec cursus. Maecenas eu est commodo, aliquam odio non, porttitor nisi. Nulla iaculis lorem ac rutrum malesuada. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Morbi ipsum risus, tincidunt quis tempus sit amet, congue quis purus. Proin aliquam ex vitae augue fermentum, a ornare velit sodales. Donec fringilla mattis magna, a tempor augue gravida vel.
+				Curabitur varius aliquet ipsum sit amet accumsan. Sed nec elit lacinia, tempus diam vel, molestie erat. Ut ultrices semper magna, nec feugiat diam tincidunt non. Nunc ac orci turpis. Aenean finibus aliquet turpis quis porttitor. Maecenas tincidunt maximus massa non ornare. Nulla ornare posuere condimentum. Nullam dapibus, quam ac porta pulvinar, mi magna euismod urna, ut sodales neque orci eget mauris. Vivamus nec laoreet leo. Etiam vitae est sem. Duis commodo elit in orci varius semper. Aenean non massa at ipsum ultrices efficitur bibendum sed tortor. Ut volutpat ex augue, a auctor ipsum sagittis varius. Suspendisse tincidunt ultrices urna at aliquam.
+			</p>
+			<label>What is written different in paragraph above?</label>
+			<input type="text" disabled>
 		</div>
 
+		<div class="question_table">
+			<table>
+				<thead>
+				<tr>
+					<th colspan="2">The table header</th>
+				</tr>
+				</thead>
+				<tbody>
+				<tr>
+					<td>The table body</td>
+					<td>with two columns</td>
+				</tr>
+				</tbody>
+			</table>
+		</div>
 
+		<div class="test">
+			<label for="ice-cream-choice">Choose a ice cream flavor:</label>
+			<input list="ice-cream-flavors" id="ice-cream-choice" name="ice-cream-choice" />
 
+			<datalist id="ice-cream-flavors">
+				<option value="Chocolate">
+				<option value="Coconut">
+				<option value="Mint">
+				<option value="Strawberry">
+				<option value="Vanilla">
+			</datalist>
+		</div>
+
+		<div class="submit">
+			<input type="submit" value="Validuj">
+		</div>
 	</form>
 </body>
 
