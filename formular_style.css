@@ -1,5 +1,6 @@
 /* Add a black background color to the top navigation */
 .topnav {
+	width: 1000px;
 	background-color: #333;
 	overflow: hidden;
 }
@@ -28,6 +29,7 @@
 
 .formular {
 	background-color: wheat;
+	width: 1080px;
 }
 
 table,
