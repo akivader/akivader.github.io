@@ -44,3 +44,20 @@ tfoot {
 .question_table {
 	padding: 25px 25px 25px 25px;
 }
+
+.video {
+	padding: 25px 25px 25px 25px;
+}
+
+.pagination {
+	background-color: honeydew;
+	float: left;
+	padding: 10px 20px;
+	text-decoration: beige;
+	transition: background-color .3s;
+}
+
+.pagination a.active {
+	background-color: white;
+	color: red;
+}

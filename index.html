@@ -21,6 +21,7 @@
 	<h1>Neresponzivny formular</h1>
 
 	<form name="formular" class="formular" onsubmit="writeColor()">
+		<!--		question 1-->
 		<div class="question_image">
 			<img src="https://cdn.pixabay.com/photo/2020/12/27/12/07/sunrise-5863751_960_720.png">
 			<br>
@@ -28,16 +29,7 @@
 			<input type="number" id="imgquestion" name="imgquestion">
 		</div>
 
-<!--		<div class="question_color">-->
-<!--			<label>Aka farba vznikne zmiesanim modrej a zltej?</label>-->
-<!--			<br>-->
-<!--			<input type="radio" id="purple" name="color" value="purple">-->
-<!--			<label for="purple">Fialova</label>-->
-<!--			<input type="radio" id="grey" name="color" value="grey">-->
-<!--			<label for="grey">Siva</label>-->
-<!--			<input type="radio" id="green" name="color" value="green">-->
-<!--			<label for="green">Zelena</label>-->
-<!--		</div>-->
+		<!--		question 2-->
 		<div class="question_color">
 			<fieldset id="colquestion">
 				<legend>Aka farba vznikne zmiesanim modrej a zltej?</legend>
@@ -50,14 +42,17 @@
 			</fieldset>
 		</div>
 
+		<!--		question 3-->
 		<div class="question_date">
 			<label>Aky je dnesny datum?</label>
 			<input type="date" id="todaysdate" name="todaysdate">
 		</div>
 
+		<!--		question 4-->
 		<div class="question_video">
-			<video src="https://player.vimeo.com/external/363014752.sd.mp4?s=8d89ca7f3395ce76751b346160ff2c84125e5315&profile_id=139&oauth2_token_id=57447761" autoplay controls width="720px">
-			</video><br>
+			<video class="video" src="https://player.vimeo.com/external/363014752.sd.mp4?s=8d89ca7f3395ce76751b346160ff2c84125e5315&profile_id=139&oauth2_token_id=57447761" autoplay controls width="720px">
+			</video>
+			<br>
 			<label>Co je znazornene na videu?</label><br>
 			<input type="checkbox" id="ans1" name="ans1" value="Bike">
 			<label for="ans1"> I have a bike</label>
@@ -67,35 +62,36 @@
 			<label for="ans3"> I have a boat</label>
 		</div>
 
+		<!--		question 5-->
 		<div class="question_range">
 			<label for="vol">Volume (between 0 and 50):</label>
 			<input type="range" id="vol" name="vol" min="0" max="50" disabled>
 		</div>
 
+		<!--		question 6-->
 		<div class="question_time">
 			<label for="appt">Select a time between 13:00 - 15:00</label>
 			<input type="time" id="appt" name="appt">
 		</div>
 
-<!--		<div class="question_week">-->
-<!--			<label for="week">Select a week:</label>-->
-<!--			<input type="week" id="week" name="week">-->
-<!--		</div>-->
-
+		<!--		question 7-->
 		<div class="question_color">
 			<label for="favcolor">Select your brightest white color:</label>
 			<input type="color" id="favcolor" name="favcolor">
 		</div>
 
+		<!--		question 8-->
 		<div class="question_filltext">
 			<label>Opis text z vnutra input pola</label>
 			<input type="text" placeholder="123nrew123">
 		</div>
 
+		<!--		task 1-->
 		<div class="button_expand">
 			<input type="button" onclick="alert('Hidden and disabled question are now available!')" value="Explore all questions!">
 		</div>
 
+		<!--		question 9-->
 		<div class="question_navbar">
 			<label>Aky je posledny prvok v navbare?</label>
 			<input type="radio" id="home"
@@ -115,6 +111,7 @@
 			<label for="contact">Contact</label>
 		</div>
 
+		<!--		question 10-->
 		<div class="question_ytb">
 			<iframe width="420" height="315"
 					src="https://www.youtube.com/embed/IKs1LBv5aPk">
@@ -124,6 +121,12 @@
 			<input type="number" id="prisoners" name="prisoners" placeholder="9">
 		</div>
 
+		<!--		question 11-->
+		<div class="question_pagination">
+
+		</div>
+
+		<!--		question 12-->
 		<div class="question_ol">
 			<label>V ktorej moznosti je x?</label>
 			<ol>
@@ -135,6 +138,7 @@
 			</ol>
 		</div>
 
+		<!--		question 13-->
 		<div class="question_code">
 			<p>
 				<b>Lorem</b> ipsum dolor sit amet, consectetur adipiscing elit. Aliquam consectetur in <code>coded message</code> enim nec cursus. Maecenas eu est commodo, aliquam odio non, porttitor nisi. Nulla iaculis lorem ac rutrum malesuada. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Morbi ipsum risus, tincidunt quis tempus sit amet, congue quis purus. Proin aliquam ex vitae augue fermentum, a ornare velit sodales. Donec fringilla mattis magna, a tempor augue gravida vel.
@@ -144,6 +148,7 @@
 			<input type="text" disabled>
 		</div>
 
+		<!--		question 14-->
 		<div class="question_table">
 			<table>
 				<thead>
@@ -160,6 +165,7 @@
 			</table>
 		</div>
 
+		<!--		question 15-->
 		<div class="test">
 			<label for="ice-cream-choice">Choose a ice cream flavor:</label>
 			<input list="ice-cream-flavors" id="ice-cream-choice" name="ice-cream-choice" />
@@ -173,8 +179,37 @@
 			</datalist>
 		</div>
 
+		<!--		question 16-->
+		<div class="question_map">
+			<div style="width: 100%">
+				<iframe width="720" height="600" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?width=720&amp;height=600&amp;hl=en&amp;q=london+(My%20Business%20Name)&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"></iframe>
+			</div>
+
+			<label for="city_choice">Choose which city is it?</label>
+			<input list="cities" id="city_choice" name="cities" placeholder="Praha">
+			<datalist id="cities">
+				<option value="Paris">
+				<option value="Praha">
+				<option value="Dublin">
+				<option value="Bratislava">
+				<option value="Warsaw">
+				<option value="London">
+			</datalist>
+		</div>
+
 		<div class="submit">
 			<input type="submit" value="Validuj">
+		</div>
+
+		<div class="pagination">
+			<a href="">&laquo;</a>
+			<a href="">1</a>
+			<a href="">2</a>
+			<a href="">3</a>
+			<a href="">4</a>
+			<a class="active" href="">5</a>
+			<a href="">6</a>
+			<a href="">&raquo;</a>
 		</div>
 	</form>
 </body>
