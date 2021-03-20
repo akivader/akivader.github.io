@@ -15,66 +15,109 @@ function timer(){
     var d = new Date();
     lastClick = d.getTime();
 }
+//
+// function validateImage() {
+//     var image = document.forms["non_resp_form"]["imgquestion"].value;
+//     return image === "5"
+// }
+//
+// function validateColor(){
+//     var color = document.querySelector('input[name="color"]:checked').value;
+//     return color === "green";
+// }
+//
+// function formatDate(date) {
+//     var d = new Date(date),
+//         month = '' + (d.getMonth() + 1),
+//         day = '' + d.getDate(),
+//         year = d.getFullYear();
+//
+//     if (month.length < 2)
+//         month = '0' + month;
+//     if (day.length < 2)
+//         day = '0' + day;
+//
+//     return [year, month, day].join('-');
+// }
+//
+// function validateDate(){
+//     var todayDate = formatDate(new Date());
+//     var date = document.forms["non_resp_form"]["todaysdate"].value;
+//     // alert(todayDate);
+//     // alert(date);
+//     return todayDate === date;
+// }
+//
+// //TODO
+// function validateVideo() {
+//     var videoCheckboxes = document.getElementsByName("qvideo");
+//     const correctAnswers = ["camera", "laptop", "coffee"];
+//     var correct = 0;
+//     for (var checkbox of videoCheckboxes){
+//         if (checkbox.checked){
+//             if (correctAnswers.includes(checkbox.value)){
+//                 correct++;
+//             } else {
+//                 return false;
+//             }
+//         }
+//     }
+//     return correct === 3;
+// }
+//
+// function validateRange(){
+//     var range = document.getElementById("vol").value;
+//     return range === "25";
+// }
 
-function validateImage() {
-    var image = document.forms["non_resp_form"]["imgquestion"].value;
-    return image === "5"
-}
+// function validateTime(){
+//     var time = document.getElementById("questiontime").value.split(":");
+//     const hours = parseInt(time[0]);
+//     const mins = parseInt(time[1]);
+//     return hours === 13 && mins > 35 && mins < 50;
+// }
 
-function validateColor(){
-    var color = document.querySelector('input[name="color"]:checked').value;
-    return color === "green";
-}
+// function validateBrightestColor(){
+//     var color = document.getElementById("brightestcolor").value;
+//     return color === "#ffffff"
+// }
 
-function formatDate(date) {
-    var d = new Date(date),
-        month = '' + (d.getMonth() + 1),
-        day = '' + d.getDate(),
-        year = d.getFullYear();
+// function validatePlaceholder(){
+//     var answer = document.getElementById("filltext").value;
+//     return answer === "123nrew123";
+// }
 
-    if (month.length < 2)
-        month = '0' + month;
-    if (day.length < 2)
-        day = '0' + day;
+// function validateNavbar() {
+//     var item = document.querySelector('input[name="item"]:checked').value;
+//     return item === "about";
+// }
 
-    return [year, month, day].join('-');
-}
+// function validateYtb() {
+//     var image = document.forms["non_resp_form"]["prisoners"].value;
+//     return image === "4"
+// }
 
-function validateDate(){
-    var todayDate = formatDate(new Date());
-    var date = document.forms["non_resp_form"]["todaysdate"].value;
-    // alert(todayDate);
-    // alert(date);
-    return todayDate === date;
-}
-
-
-function validateVideo() {
-    var videoCheckboxes = document.getElementsByName("qvideo");
-    const correctAnswers = ["camera", "laptop", "coffee"];
-    var correct = 0;
-    for (var checkbox of videoCheckboxes){
-        if (checkbox.checked){
-            if (correctAnswers.includes(checkbox.value)){
-                correct++;
-            } else {
-                return false;
-            }
-        }
-    }
-    alert(correct);
-    return correct === 3;
+function validatePageNumber() {
+    var image = document.forms["non_resp_form"]["pagequestion"].value;
+    return image === "5";
 }
 
 function validateForm(){
     var correctAnswers = 0;
     var incorrectAnswers = 0;
-    // var d = new Date();
+    var d = new Date();
     var timeElapsed = (d.getTime() - lastClick) /1000;
     // validateImage() ? correctAnswers++ : incorrectAnswers++;
     // validateColor() ? correctAnswers++ : incorrectAnswers++;
     // validateDate() ? correctAnswers++ : incorrectAnswers++;
-    validateVideo() ? correctAnswers++ : incorrectAnswers++;
+    // validateVideo() ? correctAnswers++ : incorrectAnswers++;
+    // validateRange() ? correctAnswers++ : incorrectAnswers++;
+    // validateTime() ? correctAnswers++ : incorrectAnswers++;
+    // validateBrightestColor() ? correctAnswers++ : incorrectAnswers++;
+    // validatePlaceholder() ? correctAnswers++ : incorrectAnswers++;
+    // validateNavbar() ? correctAnswers++ : incorrectAnswers++;
+    // validateYtb() ? correctAnswers++ : incorrectAnswers++;
+    validatePageNumber() ? correctAnswers++ : incorrectAnswers++;
 
     alert("Form done in: " + timeElapsed +"s" + "\nCorrect: " + correctAnswers + "\nIncorrect: " + incorrectAnswers);
 }
