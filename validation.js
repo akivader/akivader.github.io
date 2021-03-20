@@ -50,8 +50,12 @@ function validateImage() {
 }
 
 function validateColor(){
-    let color = document.querySelector('input[name="color"]:checked').value;
-    return color === "green";
+    let color = document.querySelector('input[name="color"]:checked') !== null;
+    if (color){
+        return document.querySelector('input[name="color"]:checked').value === "green";
+    } else {
+        return false;
+    }
 }
 
 function formatDate(date) {
