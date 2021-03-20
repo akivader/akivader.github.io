@@ -11,9 +11,21 @@ var lastClick;
 //     }
 // }
 
+function toggleEnable(id) {
+    let textbox = document.getElementById(id);
+
+    if (textbox.disabled) {
+        // If disabled, do this
+        document.getElementById(id).disabled = false;
+    } else {
+        // Enter code here
+        document.getElementById(id).disabled = true;
+    }
+}
+
 function expandQuestions(){
     alert('Skryte a nedostupne otazky su dostupne!');
-    document.getElementById("word").disable = false;
+    toggleEnable("word");
 }
 
 function timer(){
