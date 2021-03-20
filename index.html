@@ -15,10 +15,10 @@
 
 <body>
 	<div class="topnav">
-		<a class="active" href="">Home</a>
-		<a href="">News</a>
-		<a href="">Contact</a>
-		<a href="">About</a>
+		<a class="active" href="">Domov</a>
+		<a href="">Novinky</a>
+		<a href="">Kontakt</a>
+		<a href="">O nas</a>
 	</div>
 
 	<h1>Neresponzivny formular</h1>
@@ -42,6 +42,10 @@
 				<label for="grey">Siva</label>
 				<input type="radio" id="green" name="color" value="green">
 				<label for="green">Zelena</label>
+				<input type="radio" id="black" name="color" value="black">
+				<label for="black">Cierna</label>
+				<input type="radio" id="pink" name="color" value="pink">
+				<label for="pink">Ruzova</label>
 			</fieldset>
 		</div>
 
@@ -52,17 +56,35 @@
 		</div>
 
 		<!--		question 4-->
+<!--		<div class="question_video">-->
+<!--			<video class="video" src="https://player.vimeo.com/external/363014752.sd.mp4?s=8d89ca7f3395ce76751b346160ff2c84125e5315&profile_id=139&oauth2_token_id=57447761" autoplay controls width="720px">-->
+<!--			</video>-->
+<!--			<br>-->
+<!--			<label>Co je znazornene na videu?</label><br>-->
+<!--			<input type="checkbox" id="ans1" name="ans1" value="Bike">-->
+<!--			<label for="ans1"> I have a bike</label>-->
+<!--			<input type="checkbox" id="ans2" name="ans2" value="Car">-->
+<!--			<label for="ans2"> I have a car</label>-->
+<!--			<input type="checkbox" id="ans3" name="ans3" value="Boat">-->
+<!--			<label for="ans3"> I have a boat</label>-->
+<!--		</div>-->
 		<div class="question_video">
-			<video class="video" src="https://player.vimeo.com/external/363014752.sd.mp4?s=8d89ca7f3395ce76751b346160ff2c84125e5315&profile_id=139&oauth2_token_id=57447761" autoplay controls width="720px">
+			<video class="video" src="https://player.vimeo.com/external/387147633.sd.mp4?s=5b44eff9539074ce90700a3a54c5cd9b5488f54a&profile_id=139&oauth2_token_id=57447761" autoplay controls width="720px">
 			</video>
 			<br>
-			<label>Co je znazornene na videu?</label><br>
-			<input type="checkbox" id="ans1" name="ans1" value="Bike">
-			<label for="ans1"> I have a bike</label>
-			<input type="checkbox" id="ans2" name="ans2" value="Car">
-			<label for="ans2"> I have a car</label>
-			<input type="checkbox" id="ans3" name="ans3" value="Boat">
-			<label for="ans3"> I have a boat</label>
+			<label>Co je ukazane na videu?</label><br>
+			<input type="checkbox" id="ans1" name="ans1" value="tablet">
+			<label for="ans1"> Tablet</label>
+			<input type="checkbox" id="ans2" name="ans2" value="camera">
+			<label for="ans2"> Fotoaparat</label>
+			<input type="checkbox" id="ans3" name="ans3" value="laptop">
+			<label for="ans3"> Notebook</label>
+			<input type="checkbox" id="ans4" name="ans4" value="nature">
+			<label for="ans1"> Priroda</label>
+			<input type="checkbox" id="ans5" name="ans5" value="coffee">
+			<label for="ans2"> Kava</label>
+			<input type="checkbox" id="ans6" name="ans6" value="headset">
+			<label for="ans3"> Sluchadla</label>
 		</div>
 
 		<!--		question 5-->
@@ -73,14 +95,14 @@
 
 		<!--		question 6-->
 		<div class="question_time">
-			<label for="appt">Select a time between 13:00 - 15:00</label>
-			<input type="time" id="appt" name="appt">
+			<label for="questiontime">Zvol cas medzi 13:00 - 15:00</label>
+			<input type="time" id="questiontime" name="questiontime">
 		</div>
 
 		<!--		question 7-->
 		<div class="question_color">
-			<label for="favcolor">Select your brightest white color:</label>
-			<input type="color" id="favcolor" name="favcolor">
+			<label for="brightestcolor">Zvol najsvetlejsiu bielu farbu:</label>
+			<input type="color" id="brightestcolor" name="brightestcolor">
 		</div>
 
 		<!--		question 8-->
@@ -91,7 +113,7 @@
 
 		<!--		task 1-->
 		<div class="button_expand">
-			<input type="button" onclick="alert('Hidden and disabled question are now available!')" value="Explore all questions!">
+			<input type="button" onclick="alert('Skryte a nedostupne otazky su dostupne!')" value="Objav vsetky obrazky">
 		</div>
 
 		<!--		question 9-->
@@ -99,24 +121,24 @@
 			<label>Aky je posledny prvok v navbare?</label>
 			<input type="radio" id="home"
 				   name="item" value="home" checked>
-			<label for="home">Home</label>
+			<label for="home">Domov</label>
 
 			<input type="radio" id="about"
 				   name="item" value="about">
-			<label for="about">About</label>
+			<label for="about">O nas</label>
 
 			<input type="radio" id="news"
 				   name="item" value="news">
-			<label for="news">News</label>
+			<label for="news">Novinky</label>
 
 			<input type="radio" id="contact"
 				   name="item" value="contact">
-			<label for="contact">Contact</label>
+			<label for="contact">Kontakt</label>
 		</div>
 
 		<!--		question 10-->
 		<div class="question_ytb">
-			<iframe width="420" height="315"
+			<iframe width="1280" height="720"
 					src="https://www.youtube.com/embed/IKs1LBv5aPk">
 			</iframe>
 			<br>
@@ -126,7 +148,7 @@
 
 		<!--		question 11-->
 		<div class="question_pagination">
-			<label>Which page (at the bottom) is highlighted?</label>
+			<label>Ktore cislo stranky je zvyraznene?</label>
 			<input type="number" id="pagequestion" name="pagequestion" placeholder="1">
 		</div>
 
@@ -148,7 +170,7 @@
 				Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam consectetur in coded message enim nec cursus. Maecenas eu est commodo, aliquam odio non, porttitor <b>nisi</b>. Nulla iaculis lorem ac rutrum malesuada. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Morbi ipsum risus, tincidunt quis tempus sit amet, congue quis purus. Proin aliquam ex vitae augue fermentum, a ornare velit sodales. Donec fringilla mattis magna, a tempor augue gravida vel.
 				Curabitur varius aliquet ipsum sit amet accumsan. Sed nec elit lacinia, tempus diam vel, molestie erat. Ut ultrices semper magna, nec feugiat diam tincidunt non. Nunc ac orci turpis. Aenean finibus aliquet turpis quis porttitor. Maecenas tincidunt maximus massa non ornare. Nulla ornare posuere condimentum. Nullam dapibus, quam ac porta pulvinar, mi magna euismod urna, ut sodales neque orci eget mauris. Vivamus nec laoreet leo. Etiam vitae est sem. Duis commodo elit in orci varius semper. Aenean non massa at ipsum ultrices efficitur bibendum sed tortor. Ut volutpat ex augue, a auctor ipsum sagittis varius. Suspendisse tincidunt ultrices urna at aliquam.
 			</p>
-			<label>What is written different in paragraph above?</label>
+			<label>Ktore slovo je napisane zvyraznenim pismom?</label>
 			<input type="text" disabled>
 		</div>
 
@@ -157,47 +179,67 @@
 			<table>
 				<thead>
 				<tr>
-					<th colspan="2">The table header</th>
+					<th colspan="5">Hlavicka tabulky</th>
 				</tr>
 				</thead>
 				<tbody>
 				<tr>
-					<td>The table body</td>
-					<td>with two columns</td>
+					<td>1.</td>
+					<td>Pan prstenov: Spolocenstvo prstena</td>
+					<td>19. december 2001</td>
+					<td>Peter Jackson</td>
+					<td>178 minut</td>
+				</tr>
+				<tr>
+					<td>2.</td>
+					<td>Pan prstenov: Dve veze</td>
+					<td>18. december 2002</td>
+					<td>Peter Jackson</td>
+					<td>179 minut</td>
+				</tr>
+				<tr>
+					<td>3.</td>
+					<td>Pan prstenov: Navrat krala</td>
+					<td>17. december 2003</td>
+					<td>Peter Jackson</td>
+					<td>200 minut</td>
 				</tr>
 				</tbody>
 			</table>
+			<label for="tablequestion">Kolko minut trva film Dve veze?</label>
+			<input type="text" id="tablequestion" placeholder="123">
 		</div>
 
 		<!--		question 15-->
 		<div class="test">
-			<label for="ice-cream-choice">Choose a ice cream flavor:</label>
+			<label for="ice-cream-choice">Vyber prichut zmrzliny s oranzovou farbou</label>
 			<input list="ice-cream-flavors" id="ice-cream-choice" name="ice-cream-choice" />
 
 			<datalist id="ice-cream-flavors">
-				<option value="Chocolate">
-				<option value="Coconut">
-				<option value="Mint">
-				<option value="Strawberry">
-				<option value="Vanilla">
+				<option value="Cokoladova">
+				<option value="Jogurtova">
+				<option value="Pomarancova">
+				<option value="Jahodova">
+				<option value="Vanilkova">
 			</datalist>
 		</div>
 
 		<!--		question 16-->
 		<div class="question_map">
 			<div style="width: 100%">
-				<iframe width="720" height="600" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?width=720&amp;height=600&amp;hl=en&amp;q=london+(My%20Business%20Name)&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"></iframe>
+<!--				<iframe width="720" height="600" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?width=720&amp;height=600&amp;hl=en&amp;q=london+(My%20Business%20Name)&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"></iframe>-->
+				<iframe width="520" height="400" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" id="gmap_canvas" src="https://maps.google.com/maps?width=520&amp;height=400&amp;hl=en&amp;q=%20Vojcice+()&amp;t=&amp;z=12&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"></iframe>
 			</div>
 
-			<label for="city_choice">Choose which city is it?</label>
-			<input list="cities" id="city_choice" name="cities" placeholder="Praha">
+			<label for="city_choice">Ktore mesto je juzne od zvyreazneneho miesta?</label>
+			<input list="cities" id="city_choice" name="cities" placeholder="Nove Zamky">
 			<datalist id="cities">
-				<option value="Paris">
-				<option value="Praha">
-				<option value="Dublin">
-				<option value="Bratislava">
-				<option value="Warsaw">
-				<option value="London">
+				<option value="Komarno">
+				<option value="Michalovce">
+				<option value="Trebisov">
+				<option value="Sobrance">
+				<option value="Snina">
+				<option value="Svidnik">
 			</datalist>
 		</div>
 
