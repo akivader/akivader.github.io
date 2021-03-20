@@ -19,16 +19,22 @@
 		<a href="">News</a>
 		<a href="">Contact</a>
 		<a href="">About</a>
+		<a href="index.html">Change language</a>
 	</div>
 
 	<h1>Nonresponsive form</h1>
 
-	<form name="formular" class="formular" onsubmit="writeColor()">
+	<!--		task 1-->
+	<div class="button_expand">
+		<input type="button" onclick="timer()" value="Start stopwatch" id="start_button">
+	</div>
+
+	<form name="non_resp_form" class="non_resp_form" id="non_resp_form" onsubmit="validateForm()" hidden>
 		<!--		question 1-->
 		<div class="question_image">
-			<img src="https://cdn.pixabay.com/photo/2020/12/27/12/07/sunrise-5863751_960_720.png">
+			<img src="https://cdn.pixabay.com/photo/2020/12/27/12/07/sunrise-5863751_960_720.png" alt="Anime sunrise">
 			<br>
-			<label>How many clouds are in the picture?</label>
+			<label for="imgquestion">How many clouds are in the picture?</label>
 			<input type="number" id="imgquestion" name="imgquestion">
 		</div>
 
@@ -51,7 +57,7 @@
 
 		<!--		question 3-->
 		<div class="question_date">
-			<label>What is the date today?</label>
+			<label for="todaysdate">What is the date today?</label>
 			<input type="date" id="todaysdate" name="todaysdate">
 		</div>
 
@@ -80,17 +86,18 @@
 			<input type="checkbox" id="ans3" name="ans3" value="laptop">
 			<label for="ans3"> Laptop</label>
 			<input type="checkbox" id="ans4" name="ans4" value="nature">
-			<label for="ans1"> Nature</label>
+			<label for="ans4"> Nature</label>
 			<input type="checkbox" id="ans5" name="ans5" value="coffee">
-			<label for="ans2"> Coffee</label>
+			<label for="ans5"> Coffee</label>
 			<input type="checkbox" id="ans6" name="ans6" value="headset">
-			<label for="ans3"> Headset</label>
+			<label for="ans6"> Headset</label>
 		</div>
 
 		<!--		question 5-->
 		<div class="question_range">
 			<label for="vol">Choose volume between 0 and 20:</label>
-			<input type="range" id="vol" name="vol" min="0" max="50" disabled>
+			<input type="range" id="vol" name="vol" min="0" max="50" value="50" disabled onchange="updateInput(this.value)">
+			<input type="text" id="rangeInput" value="50" readonly disabled>
 		</div>
 
 		<!--		question 6-->
@@ -107,13 +114,13 @@
 
 		<!--		question 8-->
 		<div class="question_filltext">
-			<label>Rewrite the text from the box</label>
-			<input type="text" placeholder="123nrew123">
+			<label for="filltext">Rewrite the text from the box</label>
+			<input type="text" id="filltext" placeholder="123nrew123">
 		</div>
 
-		<!--		task 1-->
+		<!--		task 2-->
 		<div class="button_expand">
-			<input type="button" onclick="alert('Hidden and disabled questions are now available!')" value="Explore more questions">
+			<input type="button" onclick=expandQuestions() value="Explore all questions">
 		</div>
 
 		<!--		question 9-->
@@ -142,13 +149,13 @@
 					src="https://www.youtube.com/embed/IKs1LBv5aPk">
 			</iframe>
 			<br>
-			<label>How many prisoners are mentioned in video?</label>
+			<label for="prisoners">How many prisoners are mentioned in video?</label>
 			<input type="number" id="prisoners" name="prisoners" placeholder="9">
 		</div>
 
 		<!--		question 11-->
 		<div class="question_pagination">
-			<label>What page number is highlighted?</label>
+			<label for="pagequestion">What page number is highlighted?</label>
 			<input type="number" id="pagequestion" name="pagequestion" placeholder="1">
 		</div>
 
@@ -178,8 +185,8 @@
 				Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam consectetur in coded message enim nec cursus. Maecenas eu est commodo, aliquam odio non, porttitor <b>nisi</b>. Nulla iaculis lorem ac rutrum malesuada. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Morbi ipsum risus, tincidunt quis tempus sit amet, congue quis purus. Proin aliquam ex vitae augue fermentum, a ornare velit sodales. Donec fringilla mattis magna, a tempor augue gravida vel.
 				Curabitur varius aliquet ipsum sit amet accumsan. Sed nec elit lacinia, tempus diam vel, molestie erat. Ut ultrices semper magna, nec feugiat diam tincidunt non. Nunc ac orci turpis. Aenean finibus aliquet turpis quis porttitor. Maecenas tincidunt maximus massa non ornare. Nulla ornare posuere condimentum. Nullam dapibus, quam ac porta pulvinar, mi magna euismod urna, ut sodales neque orci eget mauris. Vivamus nec laoreet leo. Etiam vitae est sem. Duis commodo elit in orci varius semper. Aenean non massa at ipsum ultrices efficitur bibendum sed tortor. Ut volutpat ex augue, a auctor ipsum sagittis varius. Suspendisse tincidunt ultrices urna at aliquam.
 			</p>
-			<label>What word is written differently?</label>
-			<input type="text" disabled>
+			<label for="word">What word is written differently?</label>
+			<input type="text" id="word" placeholder="word" disabled>
 		</div>
 
 		<!--		question 14-->
@@ -224,11 +231,11 @@
 			<input list="ice-cream-flavors" id="ice-cream-choice" name="ice-cream-choice" />
 
 			<datalist id="ice-cream-flavors">
-				<option value="Cokoladova">
-				<option value="Jogurtova">
-				<option value="Pomarancova">
-				<option value="Jahodova">
-				<option value="Vanilkova">
+				<option value="Chocolate">
+				<option value="Yoghurt">
+				<option value="Orange">
+				<option value="Strawberry">
+				<option value="Vanilla">
 			</datalist>
 		</div>
 
@@ -252,7 +259,7 @@
 		</div>
 
 		<div class="submit">
-			<input type="submit" value="Validuj">
+			<input type="submit" value="Submit">
 		</div>
 
 		<div class="pagination">

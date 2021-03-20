@@ -11,6 +11,10 @@ var lastClick;
 //     }
 // }
 
+function updateInput(val) {
+    document.getElementById("rangeInput").value=val;
+}
+
 function toggleEnable(id) {
     let textbox = document.getElementById(id);
 
@@ -36,6 +40,7 @@ function toggleExpand(id, id1) {
 function expandQuestions(){
     alert('Skryte a nedostupne otazky su dostupne!');
     toggleEnable("word");
+    toggleEnable("vol")
 }
 
 function timer(){
@@ -99,7 +104,7 @@ function validateVideo() {
 
 function validateRange(){
     let range = document.getElementById("vol").value;
-    return range === "25";
+    return parseInt(range) < 25;
 }
 
 function validateTime(){

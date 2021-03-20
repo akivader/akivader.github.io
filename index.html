@@ -19,6 +19,7 @@
 		<a href="">Novinky</a>
 		<a href="">Kontakt</a>
 		<a href="">O nas</a>
+		<a href="indexEN.html">zmen jazyk</a>
 	</div>
 
 	<h1>Neresponzivny formular</h1>
@@ -95,7 +96,8 @@
 		<!--		question 5-->
 		<div class="question_range">
 			<label for="vol">Zvol rozsah medzi 0 and 20:</label>
-			<input type="range" id="vol" name="vol" min="0" max="50" disabled>
+			<input type="range" id="vol" name="vol" min="0" max="50" value="50" disabled onchange="updateInput(this.value)">
+			<input type="text" id="rangeInput" value="50" readonly disabled>
 		</div>
 
 		<!--		question 6-->
@@ -118,7 +120,7 @@
 
 		<!--		task 2-->
 		<div class="button_expand">
-			<input type="button" onclick=expandQuestions() value="Objav vsetky obrazky">
+			<input type="button" onclick=expandQuestions() value="Objav vsetky otazky">
 		</div>
 
 		<!--		question 9-->
@@ -184,7 +186,7 @@
 				Curabitur varius aliquet ipsum sit amet accumsan. Sed nec elit lacinia, tempus diam vel, molestie erat. Ut ultrices semper magna, nec feugiat diam tincidunt non. Nunc ac orci turpis. Aenean finibus aliquet turpis quis porttitor. Maecenas tincidunt maximus massa non ornare. Nulla ornare posuere condimentum. Nullam dapibus, quam ac porta pulvinar, mi magna euismod urna, ut sodales neque orci eget mauris. Vivamus nec laoreet leo. Etiam vitae est sem. Duis commodo elit in orci varius semper. Aenean non massa at ipsum ultrices efficitur bibendum sed tortor. Ut volutpat ex augue, a auctor ipsum sagittis varius. Suspendisse tincidunt ultrices urna at aliquam.
 			</p>
 			<label for="word">Ktore slovo je napisane zvyraznenim pismom?</label>
-			<input type="text" id="word" placeholder="write word here" disabled>
+			<input type="text" id="word" placeholder="slovo" disabled>
 		</div>
 
 		<!--		question 14-->
