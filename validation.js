@@ -23,6 +23,16 @@ function toggleEnable(id) {
     }
 }
 
+function toggleExpand(id, id1) {
+    let form = document.getElementById(id);
+
+    if (form.hidden) {
+        // If disabled, do this
+        document.getElementById(id).hidden = false;
+    }
+    document.getElementById(id1).hidden = true;
+}
+
 function expandQuestions(){
     alert('Skryte a nedostupne otazky su dostupne!');
     toggleEnable("word");
@@ -31,6 +41,7 @@ function expandQuestions(){
 function timer(){
     let d = new Date();
     lastClick = d.getTime();
+    toggleExpand("non_resp_form", "start_button");
 }
 
 function validateImage() {

@@ -25,10 +25,10 @@
 
 	<!--		task 1-->
 	<div class="button_expand">
-		<input type="button" onclick="timer()" value="Zapni stopky">
+		<input type="button" onclick="timer()" value="Zapni stopky" id="start_button">
 	</div>
 
-	<form name="non_resp_form" class="non_resp_form" onsubmit="validateForm()">
+	<form name="non_resp_form" class="non_resp_form" id="non_resp_form" onsubmit="validateForm()" hidden>
 		<!--		question 1-->
 		<div class="question_image">
 			<img src="https://cdn.pixabay.com/photo/2020/12/27/12/07/sunrise-5863751_960_720.png" alt="Anime sunrise">
