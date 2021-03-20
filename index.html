@@ -28,7 +28,7 @@
 		<input type="button" onclick="timer()" value="Zapni stopky">
 	</div>
 
-	<form name="formular" class="formular" onsubmit="writeColor()">
+	<form name="non_resp_form" class="non_resp_form" onsubmit="validateForm()">
 		<!--		question 1-->
 		<div class="question_image">
 			<img src="https://cdn.pixabay.com/photo/2020/12/27/12/07/sunrise-5863751_960_720.png">
@@ -78,18 +78,18 @@
 			</video>
 			<br>
 			<label>Co je ukazane na videu?</label><br>
-			<input type="checkbox" id="ans1" name="ans1" value="tablet">
+			<input type="checkbox" id="ans1" name="qvideo" value="tablet">
 			<label for="ans1"> Tablet</label>
-			<input type="checkbox" id="ans2" name="ans2" value="camera">
+			<input type="checkbox" id="ans2" name="qvideo" value="camera">
 			<label for="ans2"> Fotoaparat</label>
-			<input type="checkbox" id="ans3" name="ans3" value="laptop">
+			<input type="checkbox" id="ans3" name="qvideo" value="laptop">
 			<label for="ans3"> Notebook</label>
-			<input type="checkbox" id="ans4" name="ans4" value="nature">
-			<label for="ans1"> Priroda</label>
-			<input type="checkbox" id="ans5" name="ans5" value="coffee">
-			<label for="ans2"> Kava</label>
-			<input type="checkbox" id="ans6" name="ans6" value="headset">
-			<label for="ans3"> Sluchadla</label>
+			<input type="checkbox" id="ans4" name="qvideo" value="nature">
+			<label for="ans4"> Priroda</label>
+			<input type="checkbox" id="ans5" name="qvideo" value="coffee">
+			<label for="ans5"> Kava</label>
+			<input type="checkbox" id="ans6" name="qvideo" value="headset">
+			<label for="ans6"> Sluchadla</label>
 		</div>
 
 		<!--		question 5-->
