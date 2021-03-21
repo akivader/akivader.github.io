@@ -1,8 +1,10 @@
 <!DOCTYPE html>
 <html lang="sk">
 
+<!--TODO - pridat diakritiku-->
+
 <head>
-	<title>Neresponzivny formular</title>
+	<title>Neresponzívny formulár</title>
 	<link rel="stylesheet" href="formular_style.css">
 <!--	<meta name="viewport" content="width=SITE_MIN_WIDTH, initial-scale=1, maximum-scale=1">-->
 	<meta name='viewport'
@@ -18,11 +20,11 @@
 		<a class="active" href="">Domov</a>
 		<a href="">Novinky</a>
 		<a href="">Kontakt</a>
-		<a href="">O nas</a>
-		<a class="language" href="indexEN.html">Zmen jazyk</a>
+		<a href="">O nás</a>
+		<a class="language" href="indexEN.html">Zmeň jazyk</a>
 	</div>
 
-	<h1>Neresponzivny formular</h1>
+	<h1>Neresponzívny formulár</h1>
 
 	<!--		task 1-->
 	<div class="button_expand">
@@ -34,30 +36,30 @@
 		<div class="question_image">
 			<img src="https://cdn.pixabay.com/photo/2020/12/27/12/07/sunrise-5863751_960_720.png" alt="Anime sunrise">
 			<br>
-			<label for="imgquestion">Kolko oblakov je na obrazku?</label>
+			<label for="imgquestion">1. Koľko oblakov je na obrázku?</label>
 			<input type="number" id="imgquestion" name="imgquestion">
 		</div>
 
 		<!--		question 2-->
 		<div class="question_color">
 			<fieldset id="colquestion">
-				<legend>Aka farba vznikne zmiesanim modrej a zltej?</legend>
+				<legend>2. Aká farba vznikne zmiešaním modrej a žltej?</legend>
 				<input type="radio" id="purple" name="color" value="purple">
-				<label for="purple">Fialova</label>
+				<label for="purple">Fialová</label>
 				<input type="radio" id="grey" name="color" value="grey">
-				<label for="grey">Siva</label>
+				<label for="grey">Sivá</label>
 				<input type="radio" id="green" name="color" value="green">
-				<label for="green">Zelena</label>
+				<label for="green">Zelená</label>
 				<input type="radio" id="black" name="color" value="black">
-				<label for="black">Cierna</label>
+				<label for="black">Čierna</label>
 				<input type="radio" id="pink" name="color" value="pink">
-				<label for="pink">Ruzova</label>
+				<label for="pink">Ružová</label>
 			</fieldset>
 		</div>
 
 		<!--		question 3-->
 		<div class="question_date">
-			<label for="todaysdate">Aky je dnesny datum?</label>
+			<label for="todaysdate">3. Aký je dnešný dátum?</label>
 			<input type="date" id="todaysdate" name="todaysdate">
 		</div>
 
@@ -78,61 +80,61 @@
 			<video class="video" src="https://player.vimeo.com/external/387147633.sd.mp4?s=5b44eff9539074ce90700a3a54c5cd9b5488f54a&profile_id=139&oauth2_token_id=57447761" autoplay controls width="720px">
 			</video>
 			<br>
-			<label>Co je ukazane na videu?</label><br>
+			<label>4. Čo je ukázané vo videu?</label><br>
 			<input type="checkbox" id="ans1" name="qvideo" value="tablet">
 			<label for="ans1"> Tablet</label>
 			<input type="checkbox" id="ans2" name="qvideo" value="camera">
-			<label for="ans2"> Fotoaparat</label>
+			<label for="ans2"> Fotoaparát</label>
 			<input type="checkbox" id="ans3" name="qvideo" value="laptop">
 			<label for="ans3"> Notebook</label>
 			<input type="checkbox" id="ans4" name="qvideo" value="nature">
-			<label for="ans4"> Priroda</label>
+			<label for="ans4"> Príroda</label>
 			<input type="checkbox" id="ans5" name="qvideo" value="coffee">
-			<label for="ans5"> Kava</label>
+			<label for="ans5"> Káva</label>
 			<input type="checkbox" id="ans6" name="qvideo" value="headset">
-			<label for="ans6"> Sluchadla</label>
+			<label for="ans6"> Slúchadla</label>
 		</div>
 
 		<!--		question 5-->
 		<div class="question_range">
-			<label for="vol">Zvol rozsah medzi 0 and 20:</label>
+			<label for="vol">5. Zvoľ hodnotu medzi 0 a 20:</label>
 			<input type="range" id="vol" name="vol" min="0" max="50" value="50" disabled onchange="updateInput(this.value)">
 			<input type="text" id="rangeInput" value="50" readonly disabled>
 		</div>
 
 		<!--		question 6-->
 		<div class="question_time">
-			<label for="questiontime">Zvol cas medzi 13:35 - 13:50</label>
+			<label for="questiontime">6. Zvoľ čas medzi 13:35 - 13:50</label>
 			<input type="time" id="questiontime" name="questiontime">
 		</div>
 
 		<!--		question 7-->
 		<div class="question_color">
-			<label for="brightestcolor">Zvol najsvetlejsiu bielu farbu:</label>
+			<label for="brightestcolor">7. Zvoľ najsvetlejšiu bielu farbu:</label>
 			<input type="color" id="brightestcolor" name="brightestcolor">
 		</div>
 
 		<!--		question 8-->
 		<div class="question_filltext">
-			<label for="filltext">Opis text z vnutra input pola</label>
+			<label for="filltext">8. Opíš text zvnútra poľa</label>
 			<input type="text" id="filltext" placeholder="123nrew123">
 		</div>
 
 		<!--		task 2-->
 		<div class="button_expand">
-			<input type="button" onclick=expandQuestions() value="Spristupni nedostupne odpovede a objav vsetky otazky">
+			<input type="button" onclick=expandQuestions() value="Sprístupni nedostupné odpovede a objav všetky otázky">
 		</div>
 
 		<!--		question 9-->
 		<div class="question_navbar">
-			<label>Aky je posledny prvok v navigacnom menu vlavo?</label>
+			<label>9. Aký je posledný prvok v navigačnom menu vľavo?</label>
 			<input type="radio" id="home"
 				   name="item" value="home" checked>
 			<label for="home">Domov</label>
 
 			<input type="radio" id="about"
 				   name="item" value="about">
-			<label for="about">O nas</label>
+			<label for="about">O nás</label>
 
 			<input type="radio" id="news"
 				   name="item" value="news">
@@ -149,13 +151,13 @@
 					src="https://www.youtube.com/embed/IKs1LBv5aPk">
 			</iframe>
 			<br>
-			<label for="prisoners">Kolko vaznov je vo videu zmienenych?</label>
+			<label for="prisoners">10. Koľko väzňov je zmienených vo videu?</label>
 			<input type="number" id="prisoners" name="prisoners" placeholder="9">
 		</div>
 
 		<!--		question 11-->
 		<div class="question_pagination">
-			<label for="pagequestion">Ktore cislo naspodku stranky je zvyraznene?</label>
+			<label for="pagequestion">11. Ktoré čislo naspodku stránky je zvýraznené?</label>
 			<input type="number" id="pagequestion" name="pagequestion" placeholder="1">
 		</div>
 
@@ -168,7 +170,7 @@
 				<li>Fill muffin tray 3/4 full.</li>
 				<li>Bake for 20 minutes.</li>
 			</ol>
-			<label for="ol_choice">V ktorej moznosti je zlomok?</label>
+			<label for="ol_choice">12. V ktorej možnosti je zlomok?</label>
 			<input list="ol_options" id="ol_choice" name="ol_choice"/>
 			<datalist id="ol_options">
 				<option value="1">
@@ -185,7 +187,7 @@
 				Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam consectetur in coded message enim nec cursus. Maecenas eu est commodo, aliquam odio non, porttitor <b>nisi</b>. Nulla iaculis lorem ac rutrum malesuada. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Morbi ipsum risus, tincidunt quis tempus sit amet, congue quis purus. Proin aliquam ex vitae augue fermentum, a ornare velit sodales. Donec fringilla mattis magna, a tempor augue gravida vel.
 				Curabitur varius aliquet ipsum sit amet accumsan. Sed nec elit lacinia, tempus diam vel, molestie erat. Ut ultrices semper magna, nec feugiat diam tincidunt non. Nunc ac orci turpis. Aenean finibus aliquet turpis quis porttitor. Maecenas tincidunt maximus massa non ornare. Nulla ornare posuere condimentum. Nullam dapibus, quam ac porta pulvinar, mi magna euismod urna, ut sodales neque orci eget mauris. Vivamus nec laoreet leo. Etiam vitae est sem. Duis commodo elit in orci varius semper. Aenean non massa at ipsum ultrices efficitur bibendum sed tortor. Ut volutpat ex augue, a auctor ipsum sagittis varius. Suspendisse tincidunt ultrices urna at aliquam.
 			</p>
-			<label for="word">Ktore slovo je napisane zvyraznenim pismom?</label>
+			<label for="word">13. Ktoré slovo je napísané zvýrazneným písmom?</label>
 			<input type="text" id="word" placeholder="slovo" disabled>
 		</div>
 
@@ -194,40 +196,40 @@
 			<table>
 				<thead>
 				<tr>
-					<th colspan="5">Trilogia pan prstenov</th>
+					<th colspan="5">Trilógia Pán Prsteňov</th>
 				</tr>
 				</thead>
 				<tbody>
 				<tr>
 					<td>1.</td>
-					<td>Pan prstenov: Spolocenstvo prstena</td>
+					<td>Pán prsteňov: Spoločenstvo prsteňa</td>
 					<td>19. december 2001</td>
 					<td>Peter Jackson</td>
-					<td>178 minut</td>
+					<td>178 minút</td>
 				</tr>
 				<tr>
 					<td>2.</td>
-					<td>Pan prstenov: Dve veze</td>
+					<td>Pán prsteňov: Dve veže</td>
 					<td>18. december 2002</td>
 					<td>Peter Jackson</td>
-					<td>179 minut</td>
+					<td>179 minút</td>
 				</tr>
 				<tr>
 					<td>3.</td>
-					<td>Pan prstenov: Navrat krala</td>
+					<td>Pán prstenov: Návrat kráľa</td>
 					<td>17. december 2003</td>
 					<td>Peter Jackson</td>
-					<td>200 minut</td>
+					<td>200 minút</td>
 				</tr>
 				</tbody>
 			</table>
-			<label for="tablequestion">Kolko minut trva film Dve veze?</label>
+			<label for="tablequestion">14. Koľko minút trvá film Dve veže?</label>
 			<input type="text" id="tablequestion" placeholder="123">
 		</div>
 
 		<!--		question 15-->
 		<div class="test">
-			<label for="ice-cream-choice">Vyber prichut zmrzliny s oranzovou farbou</label>
+			<label for="ice-cream-choice">15. Vyber príchuť zmrzliny s oranžovou farbou</label>
 			<input list="ice-cream-flavors" id="ice-cream-choice" name="ice-cream-choice" />
 
 			<datalist id="ice-cream-flavors">
@@ -239,6 +241,7 @@
 			</datalist>
 		</div>
 
+<!--		TODO - po zltej ciare + odzoomovanie mapy-->
 		<!--		question 16-->
 		<div class="question_map">
 			<div style="width: 100%">
@@ -246,7 +249,7 @@
 				<iframe width="520" height="400" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" id="gmap_canvas" src="https://maps.google.com/maps?width=520&amp;height=400&amp;hl=en&amp;q=%20Vojcice+()&amp;t=&amp;z=12&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"></iframe>
 			</div>
 
-			<label for="city_choice">Ktore mesto je juzne najblizsie od zvyrazneneho miesta?</label>
+			<label for="city_choice">16. Ktoré mesto je južne najbližšie od zvýrazneného miesta?</label>
 			<input list="cities" id="city_choice" name="cities" placeholder="Nove Zamky">
 			<datalist id="cities">
 				<option value="Komarno">
@@ -262,6 +265,7 @@
 			<input type="submit" value="Validuj">
 		</div>
 
+<!--		TODO - vymazat href-->
 		<div class="pagination">
 			<a href="">&laquo;</a>
 			<a href="">1</a>

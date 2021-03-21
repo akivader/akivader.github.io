@@ -11,6 +11,8 @@ var lastClick;
 //     }
 // }
 
+//TODO - incorrect answers - numbers in answers
+
 function updateInput(val) {
     document.getElementById("rangeInput").value=val;
 }
@@ -169,6 +171,7 @@ function validateForm(){
     let incorrectAnswers = 0;
     let d = new Date();
     const timeElapsed = (d.getTime() - lastClick) /1000;
+    //TODO - one function
     validateImage() ? correctAnswers++ : incorrectAnswers++;
     validateColor() ? correctAnswers++ : incorrectAnswers++;
     validateDate() ? correctAnswers++ : incorrectAnswers++;
