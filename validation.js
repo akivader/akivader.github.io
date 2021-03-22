@@ -173,23 +173,120 @@ function validateForm(){
     let d = new Date();
     const timeElapsed = (d.getTime() - lastClick) /1000;
     //TODO - one function
-    validateImage() ? correctAnswers++ : incorrectAnswers++;
-    validateColor() ? correctAnswers++ : incorrectAnswers++;
-    validateDate() ? correctAnswers++ : incorrectAnswers++;
-    validateVideo() ? correctAnswers++ : incorrectAnswers++;
-    validateRange() ? correctAnswers++ : incorrectAnswers++;
-    validateTime() ? correctAnswers++ : incorrectAnswers++;
-    validateBrightestColor() ? correctAnswers++ : incorrectAnswers++;
-    validatePlaceholder() ? correctAnswers++ : incorrectAnswers++;
-    validateNavbar() ? correctAnswers++ : incorrectAnswers++;
-    validateYtb() ? correctAnswers++ : incorrectAnswers++;
-    validatePageNumber() ? correctAnswers++ : incorrectAnswers++;
-    validateOl() ? correctAnswers++ : incorrectAnswers++;
-    validateCode() ? correctAnswers++ : incorrectAnswers++;
-    validateTable() ? correctAnswers++ : incorrectAnswers++;
-    validateIceCream() ? correctAnswers++ : incorrectAnswers++;
-    validateMap() ? correctAnswers++ : incorrectAnswers++;
+    if (validateImage()){
+        correctAnswers++;
+    } else {
+        incorrectAnswers++;
+        wrongAnswers.push("1");
+    }
+    // validateImage() ? correctAnswers++ : incorrectAnswers++;
+    if (validateColor()){
+        correctAnswers++;
+    } else {
+        incorrectAnswers++;
+        wrongAnswers.push("2");
+    }
+    // validateColor() ? correctAnswers++ : incorrectAnswers++;
+    if (validateDate()) {
+        correctAnswers++;
+    } else {
+        incorrectAnswers++;
+        wrongAnswers.push("3");
+    }
+    // validateDate() ? correctAnswers++ : incorrectAnswers++;
+    if (validateVideo()){
+        correctAnswers++;
+    } else {
+        incorrectAnswers++;
+        wrongAnswers.push("4");
+    }
+
+    // validateVideo() ? correctAnswers++ : incorrectAnswers++;
+    if (validateRange()){
+        correctAnswers++;
+    } else {
+        incorrectAnswers++;
+        wrongAnswers.push("5");
+    }
+    // validateRange() ? correctAnswers++ : incorrectAnswers++;
+    if (validateTime()) {
+        correctAnswers++;
+    } else {
+        incorrectAnswers++;
+        wrongAnswers.push("6")
+    }
+    // validateTime() ? correctAnswers++ : incorrectAnswers++;
+    if (validateBrightestColor()){
+        correctAnswers++;
+    } else {
+        incorrectAnswers++;
+        wrongAnswers.push("7")
+    }
+    // validateBrightestColor() ? correctAnswers++ : incorrectAnswers++;
+    if (validatePlaceholder()) {
+        correctAnswers++;
+    } else {
+        incorrectAnswers++;
+        wrongAnswers.push("8");
+    }
+    // validatePlaceholder() ? correctAnswers++ : incorrectAnswers++;
+    if (validateNavbar()){
+        correctAnswers++;
+    } else {
+        incorrectAnswers++;
+        wrongAnswers.push("9");
+    }
+    // validateNavbar() ? correctAnswers++ : incorrectAnswers++;
+    if (validateYtb()){
+        correctAnswers++;
+    } else {
+        incorrectAnswers++;
+        wrongAnswers.push("10");
+    }
+    // validateYtb() ? correctAnswers++ : incorrectAnswers++;
+    if (validatePageNumber()){
+        correctAnswers++;
+    } else {
+        incorrectAnswers++;
+        wrongAnswers.push("11");
+    }
+    // validatePageNumber() ? correctAnswers++ : incorrectAnswers++;
+    if (validateOl()){
+        correctAnswers++;
+    } else {
+        incorrectAnswers++;
+        wrongAnswers.push("12");
+    }
+    // validateOl() ? correctAnswers++ : incorrectAnswers++;
+    if (validateCode()){
+        correctAnswers++;
+    } else {
+        incorrectAnswers++;
+        wrongAnswers.push("13");
+    }
+    // validateCode() ? correctAnswers++ : incorrectAnswers++;
+    if (validateTable()){
+        correctAnswers++;
+    } else {
+        incorrectAnswers++;
+        wrongAnswers.push("14");
+    }
+    // validateTable() ? correctAnswers++ : incorrectAnswers++;
+    if (validateIceCream()){
+        correctAnswers++;
+    } else {
+        incorrectAnswers++;
+        wrongAnswers.push("15");
+    }
+    // validateIceCream() ? correctAnswers++ : incorrectAnswers++;
+    if (validateMap()){
+        correctAnswers++;
+    } else {
+        incorrectAnswers++;
+        wrongAnswers.push("16");
+    }
+    // validateMap() ? correctAnswers++ : incorrectAnswers++;
 
 
-    alert("Form done in: " + timeElapsed +"s" + "\nCorrect: " + correctAnswers + "\nIncorrect: " + incorrectAnswers);
+    alert("Form done in: " + timeElapsed +"s" + "\nCorrect: " + correctAnswers + "\nIncorrect: " + incorrectAnswers + "\nWrong answers: " + wrongAnswers);
 }
