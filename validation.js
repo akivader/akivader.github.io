@@ -28,6 +28,10 @@ function toggleEnable(id) {
     }
 }
 
+function revealQuestion(id){
+    document.getElementById(id).hidden = false;
+}
+
 function toggleExpand(id, id1) {
     let form = document.getElementById(id);
 
@@ -39,9 +43,13 @@ function toggleExpand(id, id1) {
 }
 
 function expandQuestions(){
-    alert('Skryte a nedostupne otazky su dostupne!');
+    revealQuestion("question_code")
+    revealQuestion("question_flavor");
     toggleEnable("word");
-    toggleEnable("vol")
+    toggleEnable("vol");
+    toggleEnable("todaysdate");
+    toggleEnable("filltext");
+    alert('Skryte a nedostupne otazky su dostupne!');
 }
 
 function timer(){
@@ -52,7 +60,7 @@ function timer(){
 
 function validateImage() {
     let image = document.forms["non_resp_form"]["imgquestion"].value;
-    return image === "5"
+    return image === "8"
 }
 
 function validateColor(){

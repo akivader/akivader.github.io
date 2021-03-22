@@ -32,9 +32,9 @@
 	<form name="non_resp_form" class="non_resp_form" id="non_resp_form" onsubmit="validateForm()" hidden>
 		<!--		question 1-->
 		<div class="question_image">
-			<img src="https://cdn.pixabay.com/photo/2020/12/27/12/07/sunrise-5863751_960_720.png" alt="Anime sunrise">
+			<img src="https://cdn.pixabay.com/photo/2017/03/12/13/41/beaded-2137080_960_720.jpg" alt="Color pastels">
 			<br>
-			<label for="imgquestion">1. Koľko oblakov je na obrázku?</label>
+			<label for="imgquestion">1. Koľko farbičiek je na obrázku?</label>
 			<input type="number" id="imgquestion" name="imgquestion">
 		</div>
 
@@ -58,7 +58,7 @@
 		<!--		question 3-->
 		<div class="question_date">
 			<label for="todaysdate">3. Aký je dnešný dátum?</label>
-			<input type="date" id="todaysdate" name="todaysdate">
+			<input type="date" id="todaysdate" name="todaysdate" disabled>
 		</div>
 
 		<!--		question 4-->
@@ -103,7 +103,7 @@
 		<!--		question 8-->
 		<div class="question_filltext">
 			<label for="filltext">8. Opíš text zvnútra poľa</label>
-			<input type="text" id="filltext" placeholder="123nrew123">
+			<input type="text" id="filltext" placeholder="123nrew123" disabled>
 		</div>
 
 		<!--		task 2-->
@@ -168,7 +168,7 @@
 		</div>
 
 		<!--		question 13-->
-		<div class="question_code">
+		<div class="question_code" id="question_code" hidden>
 			<p class="text">
 				Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam consectetur in coded message enim nec cursus. Maecenas eu est commodo, aliquam odio non, porttitor <b>nisi</b>. Nulla iaculis lorem ac rutrum malesuada. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Morbi ipsum risus, tincidunt quis tempus sit amet, congue quis purus. Proin aliquam ex vitae augue fermentum, a ornare velit sodales. Donec fringilla mattis magna, a tempor augue gravida vel.
 				Curabitur varius aliquet ipsum sit amet accumsan. Sed nec elit lacinia, tempus diam vel, molestie erat. Ut ultrices semper magna, nec feugiat diam tincidunt non. Nunc ac orci turpis. Aenean finibus aliquet turpis quis porttitor. Maecenas tincidunt maximus massa non ornare. Nulla ornare posuere condimentum. Nullam dapibus, quam ac porta pulvinar, mi magna euismod urna, ut sodales neque orci eget mauris. Vivamus nec laoreet leo. Etiam vitae est sem. Duis commodo elit in orci varius semper. Aenean non massa at ipsum ultrices efficitur bibendum sed tortor. Ut volutpat ex augue, a auctor ipsum sagittis varius. Suspendisse tincidunt ultrices urna at aliquam.
@@ -214,7 +214,7 @@
 		</div>
 
 		<!--		question 15-->
-		<div class="question_flavor">
+		<div class="question_flavor" id="question_flavor" hidden>
 			<label for="ice-cream-choice">15. Vyber príchuť zmrzliny s oranžovou farbou</label>
 			<input list="ice-cream-flavors" id="ice-cream-choice" name="ice-cream-choice" />
 
