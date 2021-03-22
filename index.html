@@ -62,18 +62,6 @@
 		</div>
 
 		<!--		question 4-->
-<!--		<div class="question_video">-->
-<!--			<video class="video" src="https://player.vimeo.com/external/363014752.sd.mp4?s=8d89ca7f3395ce76751b346160ff2c84125e5315&profile_id=139&oauth2_token_id=57447761" autoplay controls width="720px">-->
-<!--			</video>-->
-<!--			<br>-->
-<!--			<label>Co je znazornene na videu?</label><br>-->
-<!--			<input type="checkbox" id="ans1" name="ans1" value="Bike">-->
-<!--			<label for="ans1"> I have a bike</label>-->
-<!--			<input type="checkbox" id="ans2" name="ans2" value="Car">-->
-<!--			<label for="ans2"> I have a car</label>-->
-<!--			<input type="checkbox" id="ans3" name="ans3" value="Boat">-->
-<!--			<label for="ans3"> I have a boat</label>-->
-<!--		</div>-->
 		<div class="question_video">
 			<video class="video" src="https://player.vimeo.com/external/387147633.sd.mp4?s=5b44eff9539074ce90700a3a54c5cd9b5488f54a&profile_id=139&oauth2_token_id=57447761" autoplay controls width="720px">
 			</video>
@@ -161,21 +149,21 @@
 
 		<!--		question 12-->
 		<div class="question_ol">
-			<ol>
-				<li>Mix flour, baking powder, sugar, and salt.</li>
-				<li>In another bowl, mix eggs, milk, and oil.</li>
-				<li>Stir both mixtures together.</li>
-				<li>Fill muffin tray 3/4 full.</li>
-				<li>Bake for 20 minutes.</li>
+			<ol type="A">
+				<li>Dobytie Bastily (1789)</li>
+				<li>Revolúcia vo Francúzsku (1848)</li>
+				<li>Objavenie Ameriky (1492)</li>
+				<li>Príchod sv. Konštantína a Metoda (863)</li>
+				<li>Vystúpenie M. Luthera (1517)</li>
 			</ol>
-			<label for="ol_choice">12. V ktorej možnosti je zlomok?</label>
+			<label for="ol_choice">12. V ktorej možnosti je napísaná najstaršia udalosť?</label>
 			<input list="ol_options" id="ol_choice" name="ol_choice"/>
 			<datalist id="ol_options">
-				<option value="1">
-				<option value="2">
-				<option value="3">
-				<option value="4">
-				<option value="5">
+				<option value="A">
+				<option value="B">
+				<option value="C">
+				<option value="D">
+				<option value="E">
 			</datalist>
 		</div>
 
@@ -239,15 +227,13 @@
 			</datalist>
 		</div>
 
-<!--		TODO - po zltej ciare + odzoomovanie mapy-->
 		<!--		question 16-->
 		<div class="question_map">
 			<div style="width: 100%">
-<!--				<iframe width="720" height="600" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?width=720&amp;height=600&amp;hl=en&amp;q=london+(My%20Business%20Name)&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"></iframe>-->
 				<iframe width="520" height="400" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" id="gmap_canvas" src="https://maps.google.com/maps?width=520&amp;height=400&amp;hl=en&amp;q=%20Vojcice+()&amp;t=&amp;z=12&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"></iframe>
 			</div>
 
-			<label for="city_choice">16. Ktoré mesto je južne najbližšie od zvýrazneného miesta?</label>
+			<label for="city_choice">16. Ktoré mesto je južne najbližšie od zvýrazneného miesta? (použi žltú čiaru a odzoomuj)</label>
 			<input list="cities" id="city_choice" name="cities" placeholder="Nove Zamky">
 			<datalist id="cities">
 				<option value="Komarno">

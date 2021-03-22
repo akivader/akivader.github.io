@@ -142,7 +142,7 @@ function validatePageNumber() {
 
 function validateOl() {
     let answer = document.forms["non_resp_form"]["ol_choice"].value;
-    return answer === "4";
+    return answer === "D";
 }
 
 function validateCode() {
