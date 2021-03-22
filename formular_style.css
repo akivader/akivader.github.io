@@ -5,14 +5,23 @@
 	overflow: hidden;
 }
 
-.language {
-	position: absolute;
-	right: 0;
-	background-color: #333;
+/*.language {*/
+/*	position: absolute;*/
+/*	right: 0;*/
+/*	background-color: #333;*/
+/*}*/
+
+.topnav a {
+	float: right;
+	color: #f2f2f2;
+	text-align: center;
+	padding: 14px 16px;
+	text-decoration: none;
+	font-size: 17px;
 }
 
 /* Style the links inside the navigation bar */
-.topnav a {
+.topnav label {
 	float: left;
 	color: #f2f2f2;
 	text-align: center;
@@ -22,13 +31,13 @@
 }
 
 /* Change the color of links on hover */
-.topnav a:hover {
+.topnav label:hover {
 	background-color: #ddd;
 	color: black;
 }
 
 /* Add a color to the active/current link */
-.topnav a.active {
+.topnav label.active {
 	background-color: #4CAF50;
 	color: white;
 }
@@ -65,7 +74,7 @@ tfoot {
 	transition: background-color .3s;
 }
 
-.pagination a.active {
-	background-color: white;
+.pagination label.active {
+	background-color: aquamarine;
 	color: red;
 }

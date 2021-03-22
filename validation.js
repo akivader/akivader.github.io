@@ -169,6 +169,7 @@ function validateMap() {
 function validateForm(){
     let correctAnswers = 0;
     let incorrectAnswers = 0;
+    let wrongAnswers = [];
     let d = new Date();
     const timeElapsed = (d.getTime() - lastClick) /1000;
     //TODO - one function
