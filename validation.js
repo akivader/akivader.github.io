@@ -170,7 +170,7 @@ function validateIceCream() {
 
 function validateMap() {
     let city = document.forms["non_resp_form"]["city_choice"].value;
-    return city === "Trebisov";
+    return city === "Banská Bystrica";
 }
 
 function validateFormComponents(correctAnswers, incorrectAnswers, wrongAnswers){
