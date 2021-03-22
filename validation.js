@@ -11,7 +11,6 @@ var lastClick;
 //     }
 // }
 
-//TODO - incorrect answers - numbers in answers
 
 function updateInput(val) {
     document.getElementById("rangeInput").value=val;
@@ -166,13 +165,7 @@ function validateMap() {
     return city === "Trebisov";
 }
 
-function validateForm(){
-    let correctAnswers = 0;
-    let incorrectAnswers = 0;
-    let wrongAnswers = [];
-    let d = new Date();
-    const timeElapsed = (d.getTime() - lastClick) /1000;
-    //TODO - one function
+function validateFormComponents(correctAnswers, incorrectAnswers, wrongAnswers){
     if (validateImage()){
         correctAnswers++;
     } else {
@@ -286,7 +279,16 @@ function validateForm(){
         wrongAnswers.push("16");
     }
     // validateMap() ? correctAnswers++ : incorrectAnswers++;
+    return { correctAnswers: correctAnswers, incorrectAnswers: incorrectAnswers, wrongAnswers: wrongAnswers};
+}
 
+function validateForm(){
+    let correct = 0;
+    let incorrect = 0;
+    let wrong = [];
+    let d = new Date();
+    const timeElapsed = (d.getTime() - lastClick) /1000;
+    const {correctAnswers, incorrectAnswers, wrongAnswers} = validateFormComponents(correct, incorrect, wrong);
 
     alert("Form done in: " + timeElapsed +"s" + "\nCorrect: " + correctAnswers + "\nIncorrect: " + incorrectAnswers + "\nWrong answers: " + wrongAnswers);
 }
