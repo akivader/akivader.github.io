@@ -58,10 +58,6 @@ tfoot {
 	color: #fff;
 }
 
-.question_table {
-	padding: 25px 25px 25px 25px;
-}
-
 .video {
 	padding: 25px 25px 25px 25px;
 }
@@ -77,4 +73,22 @@ tfoot {
 .pagination label.active {
 	background-color: aquamarine;
 	color: red;
+}
+
+.question_color,
+.question_color_picker,
+.question_range,
+.question_ol,
+.question_table {
+	width: 50%;
+	float: right;
+}
+
+.question_date,
+.question_time,
+.question_filltext,
+.question_code,
+.question_flavor {
+	width: 50%;
+	float: right;
 }
