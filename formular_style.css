@@ -37,10 +37,10 @@
 }
 
 /* Add a color to the active/current link */
-.topnav label.active {
-	background-color: #4CAF50;
-	color: white;
-}
+/*.topnav label.active {*/
+/*	background-color: #4CAF50;*/
+/*	color: white;*/
+/*}*/
 
 .non_resp_form {
 	background-color: wheat;

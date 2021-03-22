@@ -135,7 +135,7 @@ function validatePlaceholder(){
 
 function validateNavbar() {
     let item = document.querySelector('input[name="item"]:checked').value;
-    return item === "about";
+    return item === "news";
 }
 
 function validateYtb() {
