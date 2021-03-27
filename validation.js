@@ -29,6 +29,10 @@ function revealQuestion(id){
     document.getElementById(id).hidden = false;
 }
 
+function hideButton(id){
+    document.getElementById(id).hidden = true;
+}
+
 function toggleExpand(id, id1) {
     let form = document.getElementById(id);
 
@@ -47,6 +51,7 @@ function expandQuestions(){
     toggleEnable("todaysdate");
     toggleEnable("filltext");
     alert('Skryte a nedostupne otazky su dostupne!');
+    hideButton("expandButton")
 }
 
 function timer(){
