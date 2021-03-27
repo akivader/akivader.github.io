@@ -45,6 +45,7 @@
 .non_resp_form {
 	background-color: wheat;
 	width: 1080px;
+	padding: 10px 10px;
 }
 
 table,

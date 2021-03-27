@@ -97,7 +97,7 @@ function validateDate(){
 
 function validateVideo() {
     let videoCheckboxes = document.getElementsByName("qvideo");
-    const correctAnswers = ["red", "yellow", "blue"];
+    const correctAnswers = ["boats", "clouds", "lamp", "sea"];
     let correct = 0;
     for (let checkbox of videoCheckboxes){
         if (checkbox.checked){
@@ -108,7 +108,7 @@ function validateVideo() {
             }
         }
     }
-    return correct === 3;
+    return correct === 4;
 }
 
 function validateRange(){
