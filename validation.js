@@ -175,12 +175,13 @@ function validateMap() {
     return city === "Banská Bystrica";
 }
 
-function validateFormComponents(correctAnswers, incorrectAnswers, wrongAnswers){
+function validateFormComponents(correctAnswers, incorrectAnswers, wrongAnswers, badAnswers){
     if (validateImage()){
         correctAnswers++;
     } else {
         incorrectAnswers++;
         wrongAnswers.push("1");
+        badAnswers.push("Wrong number from image");
     }
     // validateImage() ? correctAnswers++ : incorrectAnswers++;
     if (validateColor()){
@@ -188,6 +189,7 @@ function validateFormComponents(correctAnswers, incorrectAnswers, wrongAnswers){
     } else {
         incorrectAnswers++;
         wrongAnswers.push("2");
+        badAnswers.push("Wrong color from mix");
     }
     // validateColor() ? correctAnswers++ : incorrectAnswers++;
     if (validateDate()) {
@@ -195,6 +197,7 @@ function validateFormComponents(correctAnswers, incorrectAnswers, wrongAnswers){
     } else {
         incorrectAnswers++;
         wrongAnswers.push("3");
+        badAnswers.push("Wrong date answer");
     }
     // validateDate() ? correctAnswers++ : incorrectAnswers++;
     if (validateVideo()){
@@ -202,6 +205,7 @@ function validateFormComponents(correctAnswers, incorrectAnswers, wrongAnswers){
     } else {
         incorrectAnswers++;
         wrongAnswers.push("4");
+        badAnswers.push("Wrong answer video checkbox");
     }
 
     // validateVideo() ? correctAnswers++ : incorrectAnswers++;
@@ -210,20 +214,23 @@ function validateFormComponents(correctAnswers, incorrectAnswers, wrongAnswers){
     } else {
         incorrectAnswers++;
         wrongAnswers.push("5");
+        badAnswers.push("Wrong range value");
     }
     // validateRange() ? correctAnswers++ : incorrectAnswers++;
     if (validateTime()) {
         correctAnswers++;
     } else {
         incorrectAnswers++;
-        wrongAnswers.push("6")
+        wrongAnswers.push("6");
+        badAnswers.push("Wrong time selected");
     }
     // validateTime() ? correctAnswers++ : incorrectAnswers++;
     if (validateBrightestColor()){
         correctAnswers++;
     } else {
         incorrectAnswers++;
-        wrongAnswers.push("7")
+        wrongAnswers.push("7");
+        badAnswers.push("Wrong brightest color selected");
     }
     // validateBrightestColor() ? correctAnswers++ : incorrectAnswers++;
     if (validatePlaceholder()) {
@@ -231,6 +238,7 @@ function validateFormComponents(correctAnswers, incorrectAnswers, wrongAnswers){
     } else {
         incorrectAnswers++;
         wrongAnswers.push("8");
+        badAnswers.push("Wrong placeholder answer");
     }
     // validatePlaceholder() ? correctAnswers++ : incorrectAnswers++;
     if (validateNavbar()){
@@ -238,6 +246,7 @@ function validateFormComponents(correctAnswers, incorrectAnswers, wrongAnswers){
     } else {
         incorrectAnswers++;
         wrongAnswers.push("9");
+        badAnswers.push("Wrong navbar item selected");
     }
     // validateNavbar() ? correctAnswers++ : incorrectAnswers++;
     if (validateYtb()){
@@ -245,6 +254,7 @@ function validateFormComponents(correctAnswers, incorrectAnswers, wrongAnswers){
     } else {
         incorrectAnswers++;
         wrongAnswers.push("10");
+        badAnswers.push("Wrong ytb answer selected");
     }
     // validateYtb() ? correctAnswers++ : incorrectAnswers++;
     if (validatePageNumber()){
@@ -252,6 +262,7 @@ function validateFormComponents(correctAnswers, incorrectAnswers, wrongAnswers){
     } else {
         incorrectAnswers++;
         wrongAnswers.push("11");
+        badAnswers.push("Wrong page number selected");
     }
     // validatePageNumber() ? correctAnswers++ : incorrectAnswers++;
     if (validateOl()){
@@ -259,6 +270,7 @@ function validateFormComponents(correctAnswers, incorrectAnswers, wrongAnswers){
     } else {
         incorrectAnswers++;
         wrongAnswers.push("12");
+        badAnswers.push("Wrong ordered list option selected");
     }
     // validateOl() ? correctAnswers++ : incorrectAnswers++;
     if (validateCode()){
@@ -266,6 +278,7 @@ function validateFormComponents(correctAnswers, incorrectAnswers, wrongAnswers){
     } else {
         incorrectAnswers++;
         wrongAnswers.push("13");
+        badAnswers.push("Wrong word written from paragraph");
     }
     // validateCode() ? correctAnswers++ : incorrectAnswers++;
     if (validateTable()){
@@ -273,6 +286,7 @@ function validateFormComponents(correctAnswers, incorrectAnswers, wrongAnswers){
     } else {
         incorrectAnswers++;
         wrongAnswers.push("14");
+        badAnswers.push("Wrong table answer");
     }
     // validateTable() ? correctAnswers++ : incorrectAnswers++;
     if (validateIceCream()){
@@ -280,6 +294,7 @@ function validateFormComponents(correctAnswers, incorrectAnswers, wrongAnswers){
     } else {
         incorrectAnswers++;
         wrongAnswers.push("15");
+        badAnswers.push("Wrong flavor selected");
     }
     // validateIceCream() ? correctAnswers++ : incorrectAnswers++;
     if (validateMap()){
@@ -287,18 +302,30 @@ function validateFormComponents(correctAnswers, incorrectAnswers, wrongAnswers){
     } else {
         incorrectAnswers++;
         wrongAnswers.push("16");
+        badAnswers.push("Wrong map place selected");
     }
     // validateMap() ? correctAnswers++ : incorrectAnswers++;
-    return { correctAnswers: correctAnswers, incorrectAnswers: incorrectAnswers, wrongAnswers: wrongAnswers};
+    return { correctAnswers: correctAnswers, incorrectAnswers: incorrectAnswers, wrongAnswers: wrongAnswers, bad: badAnswers};
 }
 
 function validateForm(){
     let correct = 0;
     let incorrect = 0;
     let wrong = [];
+    let badAnswers = [];
     let d = new Date();
     const timeElapsed = (d.getTime() - lastClick) /1000;
-    const {correctAnswers, incorrectAnswers, wrongAnswers} = validateFormComponents(correct, incorrect, wrong);
-
+    const {correctAnswers, incorrectAnswers, wrongAnswers, bad} = validateFormComponents(correct, incorrect, wrong, badAnswers);
+    // bad.join(",\n");
     alert("Form done in: " + timeElapsed +"s" + "\nCorrect: " + correctAnswers + "\nIncorrect: " + incorrectAnswers + "\nWrong answers: " + wrongAnswers);
+
+    document.write("<h1>Thank you!</h1>");
+    document.write("<h3>Here is your data: </h3>");
+    document.write("<h3>Correct answers: </h3>" + correctAnswers);
+    document.write("<h3>Incorrect answers: </h3>" + incorrectAnswers);
+    document.write("<h3>Wrong answers: </h3>" + wrongAnswers);
+    document.write("<h3>Bad answers: </h3>");
+    for (let str of bad){
+        document.write("<h6></h6>" + str);
+    }
 }
