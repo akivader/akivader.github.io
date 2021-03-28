@@ -321,6 +321,7 @@ function validateForm(){
 
     document.write("<h1>Thank you!</h1>");
     document.write("<h3>Here is your data: </h3>");
+    document.write("<h3>Form done in: </h3>" + timeElapsed);
     document.write("<h3>Correct answers: </h3>" + correctAnswers);
     document.write("<h3>Incorrect answers: </h3>" + incorrectAnswers);
     document.write("<h3>Wrong answers: </h3>" + wrongAnswers);
