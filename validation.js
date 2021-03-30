@@ -50,7 +50,7 @@ function expandQuestions(){
     toggleEnable("vol");
     toggleEnable("todaysdate");
     toggleEnable("filltext");
-    alert('Skryte a nedostupne otazky su dostupne!');
+    // alert('Skryte a nedostupne otazky su dostupne!');
     hideButton("expandButton")
 }
 
