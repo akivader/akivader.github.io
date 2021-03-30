@@ -167,7 +167,7 @@ function validateTable() {
 
 function validateIceCream() {
     let iceCream = document.forms["non_resp_form"]["ice-cream-choice"].value;
-    return iceCream === "orange" || iceCream === "Pomarancova";
+    return iceCream === "Orange" || iceCream === "Pomaranč";
 }
 
 function validateMap() {
