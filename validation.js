@@ -115,14 +115,14 @@ function validateVideo() {
 
 function validateRange(){
     let range = document.getElementById("vol").value;
-    return parseInt(range) < 25;
+    return parseInt(range) < 21;
 }
 
 function validateTime(){
     let time = document.getElementById("questiontime").value.split(":");
     const hours = parseInt(time[0]);
     const mins = parseInt(time[1]);
-    return hours === 13 && mins > 35 && mins < 50;
+    return hours === 13 && mins > 34 && mins < 51;
 }
 
 function validateBrightestColor(){
