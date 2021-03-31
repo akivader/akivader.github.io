@@ -132,7 +132,8 @@ function validateBrightestColor(){
 
 function validatePlaceholder(){
     let answer = document.getElementById("filltext").value;
-    return answer === "123nrew123";
+    let toValidate = answer.trim().toLocaleLowerCase();
+    return toValidate === "123nrew123";
 }
 
 function validateNavbar() {
@@ -157,7 +158,8 @@ function validateOl() {
 
 function validateCode() {
     let answer = document.getElementById("word").value;
-    return answer === "nisi";
+    let toValidate = answer.trim().toLocaleLowerCase();
+    return toValidate === "nisi";
 }
 
 function validateTable() {
