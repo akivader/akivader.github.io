@@ -1,17 +1,5 @@
 var lastClick;
 
-// function writeColor() {
-//     var image = document.forms["non_resp_form"]["imgquestion"].value;
-//     if (image === "4"){
-//         alert("Cant be 4");
-//         return false;
-//     } else {
-//         alert("Form done in: " + timeElapsed +"s");
-//         return false;
-//     }
-// }
-
-
 function updateInput(val) {
     document.getElementById("rangeInput").value=val;
 }
@@ -37,7 +25,6 @@ function toggleExpand(id, id1) {
     let form = document.getElementById(id);
 
     if (form.hidden) {
-        // If disabled, do this
         document.getElementById(id).hidden = false;
     }
     document.getElementById(id1).hidden = true;
@@ -50,7 +37,6 @@ function expandQuestions(){
     toggleEnable("vol");
     toggleEnable("todaysdate");
     toggleEnable("filltext");
-    // alert('Skryte a nedostupne otazky su dostupne!');
     hideButton("expandButton")
 }
 
@@ -91,8 +77,6 @@ function formatDate(date) {
 function validateDate(){
     let todayDate = formatDate(new Date());
     let date = document.forms["non_resp_form"]["todaysdate"].value;
-    // alert(todayDate);
-    // alert(date);
     return todayDate === date;
 }
 
@@ -185,7 +169,6 @@ function validateFormComponents(correctAnswers, incorrectAnswers, wrongAnswers, 
         wrongAnswers.push("1");
         badAnswers.push("Wrong number from image");
     }
-    // validateImage() ? correctAnswers++ : incorrectAnswers++;
     if (validateColor()){
         correctAnswers++;
     } else {
@@ -193,7 +176,6 @@ function validateFormComponents(correctAnswers, incorrectAnswers, wrongAnswers, 
         wrongAnswers.push("2");
         badAnswers.push("Wrong color from mix");
     }
-    // validateColor() ? correctAnswers++ : incorrectAnswers++;
     if (validateDate()) {
         correctAnswers++;
     } else {
@@ -201,7 +183,6 @@ function validateFormComponents(correctAnswers, incorrectAnswers, wrongAnswers, 
         wrongAnswers.push("3");
         badAnswers.push("Wrong date answer");
     }
-    // validateDate() ? correctAnswers++ : incorrectAnswers++;
     if (validateVideo()){
         correctAnswers++;
     } else {
@@ -210,7 +191,6 @@ function validateFormComponents(correctAnswers, incorrectAnswers, wrongAnswers, 
         badAnswers.push("Wrong answer video checkbox");
     }
 
-    // validateVideo() ? correctAnswers++ : incorrectAnswers++;
     if (validateRange()){
         correctAnswers++;
     } else {
@@ -218,7 +198,6 @@ function validateFormComponents(correctAnswers, incorrectAnswers, wrongAnswers, 
         wrongAnswers.push("5");
         badAnswers.push("Wrong range value");
     }
-    // validateRange() ? correctAnswers++ : incorrectAnswers++;
     if (validateTime()) {
         correctAnswers++;
     } else {
@@ -226,7 +205,6 @@ function validateFormComponents(correctAnswers, incorrectAnswers, wrongAnswers, 
         wrongAnswers.push("6");
         badAnswers.push("Wrong time selected");
     }
-    // validateTime() ? correctAnswers++ : incorrectAnswers++;
     if (validateBrightestColor()){
         correctAnswers++;
     } else {
@@ -234,7 +212,6 @@ function validateFormComponents(correctAnswers, incorrectAnswers, wrongAnswers, 
         wrongAnswers.push("7");
         badAnswers.push("Wrong brightest color selected");
     }
-    // validateBrightestColor() ? correctAnswers++ : incorrectAnswers++;
     if (validatePlaceholder()) {
         correctAnswers++;
     } else {
@@ -242,7 +219,6 @@ function validateFormComponents(correctAnswers, incorrectAnswers, wrongAnswers, 
         wrongAnswers.push("8");
         badAnswers.push("Wrong placeholder answer");
     }
-    // validatePlaceholder() ? correctAnswers++ : incorrectAnswers++;
     if (validateNavbar()){
         correctAnswers++;
     } else {
@@ -250,7 +226,6 @@ function validateFormComponents(correctAnswers, incorrectAnswers, wrongAnswers, 
         wrongAnswers.push("9");
         badAnswers.push("Wrong navbar item selected");
     }
-    // validateNavbar() ? correctAnswers++ : incorrectAnswers++;
     if (validateYtb()){
         correctAnswers++;
     } else {
@@ -258,7 +233,6 @@ function validateFormComponents(correctAnswers, incorrectAnswers, wrongAnswers, 
         wrongAnswers.push("10");
         badAnswers.push("Wrong ytb answer selected");
     }
-    // validateYtb() ? correctAnswers++ : incorrectAnswers++;
     if (validatePageNumber()){
         correctAnswers++;
     } else {
@@ -266,7 +240,6 @@ function validateFormComponents(correctAnswers, incorrectAnswers, wrongAnswers, 
         wrongAnswers.push("11");
         badAnswers.push("Wrong page number selected");
     }
-    // validatePageNumber() ? correctAnswers++ : incorrectAnswers++;
     if (validateOl()){
         correctAnswers++;
     } else {
@@ -274,7 +247,6 @@ function validateFormComponents(correctAnswers, incorrectAnswers, wrongAnswers, 
         wrongAnswers.push("12");
         badAnswers.push("Wrong ordered list option selected");
     }
-    // validateOl() ? correctAnswers++ : incorrectAnswers++;
     if (validateCode()){
         correctAnswers++;
     } else {
@@ -282,7 +254,6 @@ function validateFormComponents(correctAnswers, incorrectAnswers, wrongAnswers, 
         wrongAnswers.push("13");
         badAnswers.push("Wrong word written from paragraph");
     }
-    // validateCode() ? correctAnswers++ : incorrectAnswers++;
     if (validateTable()){
         correctAnswers++;
     } else {
@@ -290,7 +261,6 @@ function validateFormComponents(correctAnswers, incorrectAnswers, wrongAnswers, 
         wrongAnswers.push("14");
         badAnswers.push("Wrong table answer");
     }
-    // validateTable() ? correctAnswers++ : incorrectAnswers++;
     if (validateIceCream()){
         correctAnswers++;
     } else {
@@ -298,7 +268,6 @@ function validateFormComponents(correctAnswers, incorrectAnswers, wrongAnswers, 
         wrongAnswers.push("15");
         badAnswers.push("Wrong flavor selected");
     }
-    // validateIceCream() ? correctAnswers++ : incorrectAnswers++;
     if (validateMap()){
         correctAnswers++;
     } else {
@@ -306,7 +275,6 @@ function validateFormComponents(correctAnswers, incorrectAnswers, wrongAnswers, 
         wrongAnswers.push("16");
         badAnswers.push("Wrong map place selected");
     }
-    // validateMap() ? correctAnswers++ : incorrectAnswers++;
     return { correctAnswers: correctAnswers, incorrectAnswers: incorrectAnswers, wrongAnswers: wrongAnswers, bad: badAnswers};
 }
 
@@ -318,8 +286,6 @@ function validateForm(){
     let d = new Date();
     const timeElapsed = (d.getTime() - lastClick) /1000;
     const {correctAnswers, incorrectAnswers, wrongAnswers, bad} = validateFormComponents(correct, incorrect, wrong, badAnswers);
-    // bad.join(",\n");
-    // alert("Form done in: " + timeElapsed +"s" + "\nCorrect: " + correctAnswers + "\nIncorrect: " + incorrectAnswers + "\nWrong answers: " + wrongAnswers);
 
     document.write("<h1>Thank you!</h1>");
     document.write("<h3>Here is your data: </h3>");
@@ -327,8 +293,4 @@ function validateForm(){
     document.write("<h3>Correct answers: </h3>" + correctAnswers);
     document.write("<h3>Incorrect answers: </h3>" + incorrectAnswers);
     document.write("<h3>Wrong answers: </h3>" + wrongAnswers);
-    // document.write("<h3>Bad answers: </h3>");
-    // for (let str of bad){
-    //     document.write("<h6></h6>" + str);
-    // }
 }
